@@ -27,45 +27,45 @@ const maminaRecenica = "kako si dete";
 
 const isWoman = true;
 
-if(ime === "Jelisaveta") {
+if (ime === "Jelisaveta") {
     // console.log(`Cao drugarice ${ime}`);
 } else {
     // console.log(`Cao druze ${ime}`);
 }
 
-if(1 !== "1") {
+if (1 !== "1") {
     // console.log("usao sam u IF");
 }
 
-if(1>5) {
+if (1 > 5) {
     // console.log("usao sam u IF");
 }
 
-if(1<5) {
+if (1 < 5) {
     // console.log("usao sam u IF");
 }
 
-if(5 <= 5) {
+if (5 <= 5) {
     // console.log("usao sam u IF");
 }
 
-if(isWoman && 2===1) {
+if (isWoman && 2 === 1) {
     // console.log('1');
 }
 
-if(isWoman || 2===1){
+if (isWoman || 2 === 1) {
     // console.log('1');
 }
 
-if((isWoman || 2===1)) {
+if ((isWoman || 2 === 1)) {
     // console.log(1);
-} else if(3>1) {
+} else if (3 > 1) {
 
 } else {
 
 };
 
-const ocene = [1,2,4,5,1,5,1];
+const ocene = [1, 2, 4, 5, 1, 5, 1];
 // console.log(ocene);
 // console.log(ocene.length);
 // console.log(ocene[0]);
@@ -73,10 +73,10 @@ const ocene = [1,2,4,5,1,5,1];
 // ocene = [1,2,3]
 ocene[0] = 3;
 
-console.log(ocene);
+//console.log(ocene);
 
 
-for(let i = 0; i<ocene.length; i = i + 1) {
+for (let i = 0; i < ocene.length; i = i + 1) {
     // console.log('cao ',i);
 }
 
@@ -85,10 +85,10 @@ for (const ocena of ocene) {
 }
 
 let sabraneOcene = 0;
-for(let trenutnaOcena of ocene){
+for (let trenutnaOcena of ocene) {
     sabraneOcene = sabraneOcene + trenutnaOcena;
 }
-const prosek = sabraneOcene/ocene.length;
+const prosek = sabraneOcene / ocene.length;
 // console.log(prosek);
 
 for (let i = 0; i < ocene.length; i++) {
@@ -96,30 +96,111 @@ for (let i = 0; i < ocene.length; i++) {
 }
 
 let i = 0;
-while (i<ocene.length) {
-    console.log("test");
+while (i < ocene.length) {
+    // console.log("test");
     i++;
 }
 
 for (const trenutnaOcena of ocene) {
     switch (trenutnaOcena) {
-    case 1:
-        console.log("Ja sam saznao da imam jednog keca");
-        break;
-    case 2:
-        console.log("Ja sam saznao da imam jednu dvojku");
-    default:
-        console.log("Profesor mi je dao nemogucu ocenu");
-        break;
-}
+        case 1:
+            // console.log("Ja sam saznao da imam jednog keca");
+            break;
+        case 2:
+        // console.log("Ja sam saznao da imam jednu dvojku");
+        default:
+            // console.log("Profesor mi je dao nemogucu ocenu");
+            break;
+    }
 }
 
 switch (true) {
-    case 1===1:
-        console.log('1 je zaista 1');
+    case 1 === 1:
+        // console.log('1 je zaista 1');
         break;
 
 
     default:
         break;
 }
+const student = {
+    brIndeks: 50,
+    ime: "Jelisaveta",
+    prezime: "Medarovic"
+};
+student.brIndeks = 79;
+student.ocene = {
+    math: 10,
+    eng: 7
+};
+student.ocene.eng = 9;
+console.log(student);
+
+function f() {
+
+}
+
+// const sabiranje1 = (a,b) => {
+//     //logika za slanje informacija bekendu
+//     //....
+//     alert("uspesno ste poslali podatke serveru")
+//     console.log(a+b); // 3
+// };
+
+// const sabiranje2 = (a,b) => a+b;
+
+
+// const rezultat = sabiranje1(1,2);
+// console.log(rezultat); // undefined
+
+
+// const login = (username, pass) => {
+//     // posalji podatke bekendu;
+//     // cekaj od bekenda response i spakuj ga u promenljivu;
+//     return "200";
+
+// }
+
+// const beResponse = login('','');
+// if (beResponse === "200") {
+//     alert("uspesno ste se ulogovali");
+// } else if(beResponse === "401") {
+//     alert("pogresan username ili passw");
+// } else {
+//     alert("nepoznata greska");
+// }
+
+
+// login("user","passs")
+
+const kalkulator = (br1 = 2, br2 = 2, operand = "+") => {
+    switch (operand) {
+        case "+":
+            return br1 + br2;
+        case "-":
+            return br1 - br2;
+        case "*":
+            return br1 * br2;
+        case "/":
+            return br1 / br2;
+        default:
+            return "Greska. Dostupni operatori su +,-,*,/";
+
+    }
+}
+console.log(kalkulator());
+
+const rezultat2 = kalkulator(2, 5, "-");
+console.log(rezultat2);
+
+const rezultat3 = kalkulator(2, 5, "*");
+console.log(rezultat3);
+
+const rezultat4 = kalkulator(2, 5, "/");
+console.log(rezultat4);
+
+const rezultat5 = kalkulator(2, 5);
+console.log(rezultat5);
+
+
+console.log(rezultat2);

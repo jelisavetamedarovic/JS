@@ -1,0 +1,13 @@
+body {
+    background-color: gray;
+}
+.error {
+    color: red;
+}
+.normal {
+    color: rgb(255, 255, 255);
+}
+
+#userListContainer {
+    background-color: lightblue;
+}
