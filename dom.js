@@ -1,16 +1,50 @@
-const contentElement = document.getElementById("content");
-const element = document.getElementsByClassName("content");
-const paragraphElement = document.getElementsByTagName("p");
+const elements = document.getElementsByClassName("content"); 
+const paragraphElements = document.getElementsByTagName("p");
 const targetElement = document.getElementById("userList");
+const btn = document.getElementById("btn");
+let isPositiveTextOnTurn = true;
+const btnPlus = document.getElementById("btnPlus");
+const btnMinus = document.getElementById("btnMinus");
+const pElement = document.getElementById("number");
+
+
+//console.log(paragraphElements);
+
+// elements[0].style=`background-color: #09ff00ff`
 
 const errorFun = () => {
-    paragraphElement[0].textContent = "GRESKA!";
-    paragraphElement[0].classList = "error";
+    paragraphElements[0].textContent = "GRESKA!";
+    paragraphElements[0].classList = "error";
 }
 const normalFun = () => {
-    paragraphElement[0].textContent = "Jupi!";
-    paragraphElement[0].classList = "normal";
+    paragraphElements[0].textContent = "Jupi!";
+    paragraphElements[0].classList = "normal";
 }
+const controler = () => {
+    if (isPositiveTextOnTurn){
+        normalFun();
+        isPositiveTextOnTurn = false;
+    } else {
+        errorFun();
+        isPositiveTextOnTurn = true;
+    }
+}
+let number = 0;
+pElement.textContent = number;
+const plus = () => {
+    number++;
+    pElement.textContent = number;
+
+}
+const minus = () => {
+    number--;
+    pElement.textContent = number;
+
+}
+
+btn.addEventListener('click', controler);
+btnPlus.addEventListener('click', plus);
+btnMinus.addEventListener('click', minus);
 
 const initialRender = () => {
     backendResponse = [
@@ -152,4 +186,4 @@ const initialRender = () => {
     });
 }
 
-initialRender();
+// initialRender();
