@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+body {
+    background-color: rgb(247, 246, 244);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+h1{
+    color: rgb(60, 61, 63);
+    font-size: large;
+    font-weight: 500;
+}
+.card {
+    background-color: white;
+    width: 250px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.096), 0 6px 20px 0 rgba(0, 0, 0, 0.092);
+}
+.cardControl{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+#taskInput{
+    padding: 5px;
+    font-weight: 250;
+    border-radius: 5px;
+    border: 1px solid rgb(209, 209, 208);
+    width: 100%;
+}
+#taskInput:focus{
+    outline: none;
+}
+#btnInput{
+    padding: 5px 15px;
+    background-color: rgb(65, 102, 135);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+#btnInput:focus{
+    outline: none;
+}
+#btnInput:hover{
+    background-color: rgb(53, 85, 113);
+}
+#btnInput:active{
+    background-color: rgb(65, 102, 135);
+}
+.listContainer{
+    width: 100%;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    border-bottom: 1px solid rgb(209, 209, 208);
+}
+.item>button{
+    background-color: white;
+    border: none;
+    color: rgb(105, 105, 105);
+    cursor: pointer;
+    
+}
+.item>button:hover{
+    color: black;
+}
+.item>button:active{
+    color: rgb(105, 105, 105);
+}
+.itemName{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.itemName>p{
+    color: rgb(60, 61, 63);
+    font-weight: 250;
+}
+.itemName>input{
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+.itemName>input:checked{
+    background-color: rgb(65, 118, 182);
+}
